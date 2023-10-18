@@ -68,7 +68,7 @@ function Pin({ pin }) {
                             className='bg-white flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-70 hover:opacity-100 hover:shadow-md' onClick={e => e.stopPropagation()}>
                             <BsFillArrowUpRightCircleFill /> {pin?.destination?.slice(8)}
                         </a>}
-                        {pin?.postedby?._id === user?.jti && (
+                        {pin?.postedBy?._id === user?.jti && (
                             <button type='button' className='bg-white p-2 opacity-70 hover:opacity-100 text-dark text-base font-bold rounded-3xl hover:shadow-md outline-none' onClick={e => {
                                 e.stopPropagation();
                                 deletePin(pin?._id)
@@ -80,9 +80,9 @@ function Pin({ pin }) {
                 </div>
                 }
             </div>
-            <Link to={`/user-profile/${pin?.postedby?._id}`} className='flex gap-2 mt-2 items-center'>
-                <img className='w-8 h-8 rounded-full object-cover' src={pin?.postedby?.image} alt='user-profile' />
-                <p className="font-semibold capitalized">{pin?.postedby?.username}</p>
+            <Link to={`/user-profile/${pin?.postedBy?._id}`} className='flex gap-2 mt-2 items-center'>
+                <img className='w-8 h-8 rounded-full object-cover' src={pin?.postedBy?.image} alt='user-profile' />
+                <p className="font-semibold capitalized">{pin?.postedBy?.userName}</p>
             </Link>
         </div>
     )

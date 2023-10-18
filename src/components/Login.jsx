@@ -22,7 +22,7 @@ function Login() {
             const user = {
                 _id: jti,
                 _type: 'user',
-                username: name,
+                userName: name,
                 image: picture
             }
             client.createIfNotExists(user)
