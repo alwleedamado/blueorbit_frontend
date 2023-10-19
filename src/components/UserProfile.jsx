@@ -83,14 +83,7 @@ function UserProfile() {
             </button>
           </div>
           <div className="px-2">
-            {pins?.length ? (
-              <MesonaryLayout pins={pins} />
-            ) :
-              (
-                <div className="flex justify-center items-center font-bold w-full text-xl mt-2">
-                  No pins found
-                </div>
-              )}
+            <MesonaryLayout pins={pins} />
           </div>
         </div>
       </div>

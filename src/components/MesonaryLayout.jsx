@@ -11,11 +11,20 @@ const breakpoint = {
 }
 function MesonaryLayout({ pins }) {
   return (
-    <Mesonry className='flex animate-slide-fwd' breakpointCols={breakpoint}>
-      {
-        pins?.map(pin => <Pin key={pin._id} pin={pin} className='w-max' />)
+    <>
+      {pins?.length ? (
+        <Mesonry className='flex animate-slide-fwd' breakpointCols={breakpoint}>
+          {pins?.map(pin => <Pin key={pin._id} pin={pin} className='w-max' />)}
+        </Mesonry>
+
+      ) :
+        (
+          <div className="flex justify-center items-center font-bold w-full text-xl mt-2">
+            No pins found
+          </div>
+        )
       }
-    </Mesonry>
+    </>
   )
 }
 
