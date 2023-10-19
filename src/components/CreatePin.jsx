@@ -129,8 +129,8 @@ function CreatePin({ user }) {
 
             <select onChange={e => setCategory(e.target.value)} className='outline-none w-4/5 text-base border-b-2  border-gray-200 p-2 rounded-md cursor-pointer'>
               <option value='other' className='bg-white'>select category</option>
-              {categories.map(cat => (
-                <option className='text-base border-0 outline-none capitalize bg-white text-black' value={cat.name}>
+              {categories.map((cat, i) => (
+                <option key={i} className='text-base border-0 outline-none capitalize bg-white text-black' value={cat.name}>
                   {cat.name}
                 </option>
               ))}
