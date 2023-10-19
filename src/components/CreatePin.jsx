@@ -50,7 +50,7 @@ function CreatePin({ user }) {
             _ref: imageAsset?._id
           }
         },
-        userid: user._id,
+        userId: user._id,
         postedBy: {
           _type: 'postedBy',
           _ref: user._id
