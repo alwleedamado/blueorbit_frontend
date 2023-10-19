@@ -15,7 +15,6 @@ function Login() {
     const parseResponse = async () => {
         if (googleUser) {   
             let userObj = jwtDecode(googleUser.credential);
-            console.log(userObj)
          
             localStorage.setItem('user', JSON.stringify(userObj))
             const { name, jti, picture } = userObj;

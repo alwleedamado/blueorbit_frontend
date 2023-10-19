@@ -22,7 +22,6 @@ function Feed() {
       client.fetch(feedQuery)
         .then(res => {
           setPins(res);
-          console.log(res)
           setLoading(false)
         })
     }

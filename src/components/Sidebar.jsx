@@ -15,7 +15,7 @@ function Sidebar({ user, closeToggle }) {
         {name: 'Coding'},
         {name:'other'}
     ]
-    console.log(user)
+
     const handleClose = () => {
         if (closeToggle) closeToggle();
     }
