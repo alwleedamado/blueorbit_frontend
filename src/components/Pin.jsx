@@ -66,7 +66,8 @@ function Pin({ pin }) {
                     <div className='flex justify-between items-center w-full'>
                         {pin?.destination && <a href={pin?.destination} target='_blank' rel='noreferrer'
                             className='bg-white flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-70 hover:opacity-100 hover:shadow-md' onClick={e => e.stopPropagation()}>
-                            <BsFillArrowUpRightCircleFill /> {pin?.destination?.slice(8)}
+                            <BsFillArrowUpRightCircleFill />
+                            {pin?.destination?.length > 15 ? `${pin?.destination.slice(0, 15)}...` : pin?.destination}
                         </a>}
                         {pin?.postedBy?._id === user?.jti && (
                             <button type='button' className='bg-white p-2 opacity-70 hover:opacity-100 text-dark text-base font-bold rounded-3xl hover:shadow-md outline-none' onClick={e => {
